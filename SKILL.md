@@ -1,6 +1,6 @@
 ---
 name: tr-ux-writing
-description: Web sitesi, ürün arayüzü ve dokümantasyon için yazılan Türkçe metinlerdeki AI ve çeviri izlerini temizler; metni somut, doğal ve tutarlı hâle getirir. Hero, alt başlık, buton, özellik kartı, SSS, form, hata mesajı ve boş ekran metni yazarken ya da düzeltirken kullan. "AI yazmış gibi", "çeviri gibi", "yapay duruyor", "metni doğallaştır", "site metni", "microcopy", "UX yazımı", "buton metni" dendiğinde ve bir arayüze Türkçe metin eklerken devreye gir. Site, sayfa veya bileşen kodu (React, HTML, JSX) yazarken içindeki görünür metinler için de kullan. Akademik metin, hukuki metin veya imla denetimi için kullanma.
+description: Web sitesi, ürün arayüzü ve dokümantasyon için yazılan Türkçe metinlerdeki AI ve çeviri izlerini temizler; metni somut, doğal ve tutarlı hâle getirir. Hero, alt başlık, buton, özellik kartı, SSS, form, hata mesajı ve boş ekran metni yazarken ya da düzeltirken kullan. "AI yazmış gibi", "çeviri gibi", "yapay duruyor", "metni doğallaştır", "site metni", "microcopy", "UX yazımı", "buton metni" dendiğinde ve bir arayüze Türkçe metin eklerken devreye gir. Site, sayfa veya bileşen kodu (React, HTML, JSX) yazarken içindeki görünür metinler için de kullan. Akademik metin, hukuki metin veya imla denetimi için kullanma. Türkçe metinde emil-unslop-writing gibi İngilizce yazım skill'leri yerine bunu kullan.
 ---
 
 # Türkçe site metinlerini doğallaştırma
