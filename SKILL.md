@@ -8,12 +8,17 @@ description: Web sitesi, ürün arayüzü ve dokümantasyon için yazılan Türk
 Amaç metni süslemek değil, okura ne olduğunu ve ne yapacağını söylemektir. Önce modu seç, sonra adımları sırayla uygula:
 
 ```
-Metni site veya bileşen kodunun içine mi yazıyorsun?
+Metni sıfırdan site veya bileşen kodunun içine mi yazıyorsun?
 ├── Evet → Yazma modu: adımlar aynı, metin doğrudan koda gider, tablo ve bağlam bloğu yok
-└── Hayır → Düzeltilecek kaç öğe var?
-    ├── 1-3 (tek buton, tek hata mesajı) → Kısa iş: bağlam bloğu yok, tablo ve varsa sorular
-    └── Daha fazla → Tam düzeltme: bağlam bloğu, tablo, listeler
+└── Hayır → Düzeltilecek metin projede bir dosyada mı duruyor (.mdx, .md, .tsx, .html)?
+    ├── Evet → Dosyada düzeltme: değişikliği dosyaya uygula, tabloyu ve listeleri kapanışta ver.
+    │          "Önce göster" denirse dosyaya dokunma, yalnızca tablo ver. İstenmedikçe commit yapma.
+    └── Hayır → Düzeltilecek kaç öğe var?
+        ├── 1-3 (tek buton, tek hata mesajı) → Kısa iş: bağlam bloğu yok, tablo ve varsa sorular
+        └── Daha fazla → Tam düzeltme: bağlam bloğu, tablo, listeler
 ```
+
+Dosyada düzeltmede kullanıcı düzeltilmiş dosyayı bekler ve değişikliği `git diff` ile gözden geçirir. Kod blokları, MDX/JSX bileşenleri, linkler ve arayüz etiketleri aynen kalır, çünkü bunlar bozulursa sayfa derlenmez ya da okur butonu bulamaz.
 
 İşe başlamadan projenin yazım kurallarını oku (`CLAUDE.md`, `AGENTS.md`, stil rehberi): hitap, terimler, belirsiz bilginin işaretlenme biçimi. Bu skill ile çelişirse proje kazanır, çünkü ekibin kararı genel kuraldan önce gelir. `[...?]` yerine projenin işaretleme biçimini kullan.
 
@@ -30,7 +35,7 @@ Bunları olduğu gibi koru çünkü değişmeleri yanlış bilgi veya hukuki ris
 
 ## 2. Bağlamı belirle
 
-Bu üç soruyu her modda kendine sor, tam düzeltmede çıktının başına da yaz (aynı okura yazılmış rehber sayfalarında bölüm başına bir kez yeter): nerede duruyor, kim okuyor, okur sonra ne yapmalı. Ürünün ne yaptığını veya okurun kim olduğunu bilmiyorsan tahmin etme, sor. Hitabı mevcut siteden al ve her yerde aynı tut. Yeni sitede ve belirsiz durumda sor. Tonu koru: kurumsal bir site daha net olur, gündelik konuşmaya dönmez.
+Bu üç soruyu her modda kendine sor, tam düzeltmede ve dosyada düzeltmede çıktının başına da yaz (aynı okura yazılmış rehber sayfalarında bölüm başına bir kez yeter): nerede duruyor, kim okuyor, okur sonra ne yapmalı. Ürünün ne yaptığını veya okurun kim olduğunu bilmiyorsan tahmin etme, sor. Hitabı mevcut siteden al ve her yerde aynı tut. Yeni sitede ve belirsiz durumda sor. Tonu koru: kurumsal bir site daha net olur, gündelik konuşmaya dönmez.
 
 ## 3. Her cümleyi sına
 
@@ -51,7 +56,7 @@ Cümle kimin ne yaptığını düz söylüyor ve klişe içermiyor mu?
 
 **Varsayım:** Buton hedefi, sonraki adım veya hitap metinde yazılı bir bilgiden çıkıyorsa (sayfada "14 gün ücretsiz deneme" yazıyorsa ya da kaynak "deneyiniz" diyorsa) öner ve `(varsayım: ...)` diye işaretle, çünkü kullanılamayan çıktı da işe yaramaz. Metinde dayanağı yoksa `[...?]` yaz. Ürün, okur, özellik ve ürün kuralı (şifre uzunluğu, limit, süre) varsayılmaz; bunlar için TODO bırak, çünkü ekranda yazan kural kullanıcıya söz verir.
 
-**Anlamı koru:** Bir cümleyi silmeden önce taşıdığı bilgiyi yaz. Bilgi varsa düzelt, silme. Bilgi yoksa sil ve nedenini söyle. Olanak bildiren ifadeyi kesinleştirme ("yerleştirilebilir" → "yerleştirebilirsiniz", "yerleştirirsiniz" değil), çünkü ürünün davranışını değiştirmiş olursun.
+**Anlamı koru:** Bir cümleyi silmeden önce taşıdığı bilgiyi yaz. Bilgi varsa düzelt, silme. Bilgi yoksa sil ve nedenini söyle. Olanak bildiren ifadeyi kesinleştirme ("yerleştirilebilir" → "yerleştirebilirsiniz", "yerleştirirsiniz" değil), çünkü ürünün davranışını değiştirmiş olursun. Cümleyi bölerken, birleştirirken ya da belirsiz bir özneyi, ekranı veya değeri netleştirirken kaynağın söylemediği bir ayrım yaptıysan (iki ekranın işini ayrı ayrı birine atamak gibi) bu bir yorumdur: tabloda `(yorum: ...)` diye işaretle ve sor; dosyada düzeltmede yorumu dosyaya uygulama. Akıcı ama yanlış cümle, belirsiz ama doğru cümleden daha zararlıdır.
 
 "Çözüm", "profesyonel", "stratejik", "sürdürülebilir", "yenilikçi", "uçtan uca" gibi kelimeleri listeden otomatik silme. Türkçe kurumsal dilde insanlar da kullanır. Yukarıdaki sınavdan geçmeyen cümlede sorun sayılırlar. Türkçe AI kalıpları için `references/ai-izleri.md`'ye bak; oradakiler de silme listesi değil, bu sınava sokulacak sinyallerdir.
 

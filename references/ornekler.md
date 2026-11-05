@@ -48,6 +48,14 @@ Kurgusal fatura uygulaması. Bilinenler: e-fatura kesme, fiş fotoğrafından tu
 | Kurulum sihirbazı, tanıtım turu ya da uzun bir profil yok. | (Sil.) | Canlı ama uydurma: bilinenlerde kurulum hakkında bilgi yok. Yapma örneği. |
 | Hesap açarak kullanım koşullarını ve gizlilik politikasını kabul etmiş olursunuz. | Hesap açarak kullanım koşullarını kabul etmiş olursunuz. Kişisel verilerinizin nasıl işlendiğini KVKK aydınlatma metninde okuyabilirsiniz. | Aydınlatma metni kabul edilmez, okunur. Son hâli hukuk onaylar. |
 
+## Anlamı koru: yorum ile düzeltme
+
+Kurgusal yönetim paneli dokümanı.
+
+| Önce | Yanlış | Doğru | Neden |
+|---|---|---|---|
+| Sayfa listesi ve yerleşim ekranları, sayfaları durumlarına ve hiyerarşilerine göre bulup düzenlemenizi sağlar. | Sayfa listesinde durumlarına göre bulabilir, yerleşim ekranında hiyerarşiyi düzenleyebilirsiniz. | Sayfa listesi ve yerleşim ekranlarında sayfaları durumlarına ve hiyerarşilerine göre bulup düzenleyebilirsiniz. | Kaynak hangi işin hangi ekranda yapıldığını söylemiyor. İşleri ekranlara dağıtmak yorumdur. Kalıbı düzelt, ayrımı yapma, gerekirse sor. |
+
 ## Bağlaç
 
 | Önce | Sonra | İlişki |

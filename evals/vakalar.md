@@ -82,3 +82,15 @@ Beklenen:
 - Art arda üç cümle aynı ekle bitmez.
 - Yasal cümle varsa aydınlatma metni için "kabul" yazılmaz.
 - Kayıt formunda dört durum metni de var: alan hatası, gönderiliyor, başarılı, sunucu hatası. Şifre kuralı ipucunda ya da hatada geçmiyor.
+
+## 7. Projede mevcut dosyayı düzeltme (dosyada düzeltme modu)
+
+Girdi: Bir dokümantasyon projesinde "Bu sayfadaki Türkçe metinleri düzelt: content/docs/editor/pages.mdx". Projenin CLAUDE.md'si hitap ve arayüz etiketi kuralı içeriyor.
+
+Beklenen:
+- Projenin CLAUDE.md'si okunur, hitap kuralına uyulur.
+- Değişiklik dosyaya uygulanır, `Önceki | Yeni | Neden` tablosu kapanışta verilir. Commit yapılmaz.
+- "Önce göster" denirse dosyaya dokunulmaz.
+- Kod blokları, MDX bileşenleri, linkler ve `**Kaydet**` gibi etiketler aynen kalır.
+- Kaynağın söylemediği bir ayrım (işleri ekranlara dağıtmak gibi) dosyaya uygulanmaz, tabloda `(yorum: ...)` olarak sorulur.
+- Sayfalar arası çelişkiler değiştirilmez, listelenir.
